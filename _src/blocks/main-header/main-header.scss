@@ -1,0 +1,39 @@
+.main-header {
+    position: relative;
+    background-color: $dark;
+    color: $light;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 13px solid transparent; /* задаём высоту бордера */
+    border-image-source: url(../main-header/line.svg); /* путь к изображению */
+    border-image-slice: 0 0 100% 0 fill; /* slice 100% по вертикали (или просто 1) */
+    border-image-repeat: repeat; /* повтор по ширине */
+    border-image-width: 0 0 13px 0; /* только нижний */
+
+    
+    &__wrap {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;       
+    }
+
+    & .user {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+
+        &__name {
+            @include DaysOne;
+            font-size: 18px;
+            line-height: 28px;
+            text-decoration: none;
+            color: $light;
+
+            &::before {
+                content: "ID ";
+            }
+        }
+    }
+
+}

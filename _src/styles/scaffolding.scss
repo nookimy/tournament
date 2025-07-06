@@ -11,11 +11,10 @@ html {
 }
 
 body {
-  min-width: $sm-width;
+  min-width: 1366px;
   @include text;
   @include mp();
-  color: $black;
-  background-color: $light;
+  background-color: rgba($bg-color, 0.59);
 }
 
 img {

@@ -577,7 +577,7 @@ const img = gulp.series(imgresponsive, imgwebp);
 const mainTasks = gulp.parallel(stylesScss, scripts, img);
 
 // Построение сценариев выполнения задач
-const dev = gulp.series(clean, copyFonts, svgopt, svgSprive, copy, html, mainTasks, watch);
+const dev = gulp.series(clean, copyFonts, svgopt, svgSprive, copy, copySvg, html, mainTasks, watch);
 
 // Таск, который выполняется по команде gulp
 exports.default = dev;
