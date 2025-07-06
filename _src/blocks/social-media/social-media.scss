@@ -1,0 +1,42 @@
+/* social-media */
+.social-media {
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+
+    &__title {
+        @include mp();
+        @include Inter();
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    &__list {
+        @include list();
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0.8rem;
+
+        & a {
+            display: inline-block;
+            color: inherit;
+            text-decoration: none;
+            line-height: 0;
+            transition: $transition;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.1);
+            }
+
+            & .icon {
+                width: 2.8rem;
+                height: 2.8rem;
+
+                &__symbol {
+                    fill: $light;
+                }
+            }
+        }
+    }
+}

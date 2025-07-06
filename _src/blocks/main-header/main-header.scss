@@ -1,3 +1,4 @@
+/* main-header */
 .main-header {
     position: relative;
     background-color: $dark;
@@ -32,6 +33,26 @@
 
             &::before {
                 content: "ID ";
+            }
+        }
+
+        button#copy-username {
+            @include btn-reset;
+            line-height: 0;
+            transition: $transition;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.1);
+            }
+
+            & .icon {
+                width: 2rem;
+                height: 2rem;
+
+                &__symbol {
+                    fill: #FFB610;
+                }
             }
         }
     }

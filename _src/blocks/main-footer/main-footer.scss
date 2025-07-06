@@ -1,0 +1,35 @@
+/* main-footer */
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $dark;
+    color: $light;
+
+    &__wrap {
+        @include container;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__copyright {
+        @include container;
+
+        & p {
+            @include mp();
+            width: 100%;
+            @include Inter();
+            font-size: 1.2rem;
+            line-height: 2rem;
+            color: rgba($color: $light, $alpha: 0.6);
+            text-align: center;
+            border-top: 1px solid rgba($color: $light, $alpha: 0.25);
+            padding: 0.8rem 0;
+        }
+    }
+}

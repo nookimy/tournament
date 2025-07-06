@@ -1,0 +1,28 @@
+/* main-nav */
+.main-nav {
+    &__list {
+        @include list();
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2.4rem;
+        @include Inter();
+        font-size: 1.4rem;
+        line-height: 2rem;
+        text-transform: capitalize;
+
+        & li {
+            & a {
+
+                color: inherit;
+                text-decoration-line: underline;
+                
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
