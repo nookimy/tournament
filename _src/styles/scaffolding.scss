@@ -17,6 +17,10 @@ body {
   background-color: rgba($bg-color, 0.59);
 }
 
+main {
+  min-height: calc(100vh - 73px);
+}
+
 img {
   max-width: 100%;
   height: auto;
