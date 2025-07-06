@@ -14,7 +14,13 @@ body {
   min-width: 1366px;
   @include text;
   @include mp();
-  background-color: rgba($bg-color, 0.59);
+  background-image: 
+    radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 218, 154, 0) 100%),
+    radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 218, 154, 0) 100%),
+    linear-gradient(rgba(255, 248, 232, 0.59), rgba(255, 248, 232, 0.59)), url(../rays-bg.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center, center, center, center;
+  background-size: 1607px 1607px, 1919px 1919px, cover, cover;
 }
 
 main {
