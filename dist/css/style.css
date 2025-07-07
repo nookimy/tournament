@@ -219,10 +219,7 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: center, center, center, center;
   background-size: 1607px 1607px, 1919px 1919px, cover, cover;
-}
-
-main {
-  min-height: calc(100vh - 73px);
+  min-height: 100vh;
 }
 
 img {
@@ -324,7 +321,10 @@ img {
 /* main-header */
 
 .main-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   background-color: #000000;
   color: #ffffff;
   padding-top: 16px;

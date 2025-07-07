@@ -21,10 +21,7 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-position: center, center, center, center;
   background-size: 1607px 1607px, 1919px 1919px, cover, cover;
-}
-
-main {
-  min-height: calc(100vh - 73px);
+  min-height: 100vh;
 }
 
 img {
