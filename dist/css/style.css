@@ -284,6 +284,29 @@ img {
   z-index: 2;
 }
 
+.button[disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.button:not(:disabled):hover::before,
+.button:not(:disabled):focus::before {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(176.33deg, #37CB19 7.41%, #21900B 97.22%);
+}
+
+.button:not(:disabled):hover::after,
+.button:not(:disabled):focus::after {
+  background: linear-gradient(176.33deg, #37CB19 7.41%, #21900B 97.22%);
+}
+
+.button:not(:disabled):active::before {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(176.33deg, #2BAD10 7.41%, #38D319 97.22%);
+}
+
+.button:not(:disabled):active::after {
+  background: linear-gradient(176.33deg, #2BAD10 7.41%, #38D319 97.22%);
+}
+
 .button::before,
 .button::after {
   content: "";
@@ -305,24 +328,6 @@ img {
   inset: 4px;
   border-radius: 1.1rem;
   background: linear-gradient(176.33deg, #38D319 7.41%, #2BAD10 97.22%);
-}
-
-.button:hover::before,
-.button:focus::before {
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(176.33deg, #37CB19 7.41%, #21900B 97.22%);
-}
-
-.button:hover::after,
-.button:focus::after {
-  background: linear-gradient(176.33deg, #37CB19 7.41%, #21900B 97.22%);
-}
-
-.button:active::before {
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(176.33deg, #2BAD10 7.41%, #38D319 97.22%);
-}
-
-.button:active::after {
-  background: linear-gradient(176.33deg, #2BAD10 7.41%, #38D319 97.22%);
 }
 
 .modal {
