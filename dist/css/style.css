@@ -403,18 +403,29 @@ img {
   width: 100vw;
   background-color: #000000;
   color: #ffffff;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  border-bottom: 13px solid transparent;
-  /* задаём высоту бордера */
-  border-image-source: url(../img/main-header/line.svg);
-  /* путь к изображению */
-  border-image-slice: 0 0 100% 0 fill;
-  /* slice 100% по вертикали (или просто 1) */
-  border-image-repeat: repeat;
-  /* повтор по ширине */
-  border-image-width: 0 0 13px 0;
-  /* только нижний */
+}
+
+.main-header__border {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 13px;
+  background-color: #FFB60F;
+  border-top: 3px solid #AC811E;
+  border-bottom: 2px solid #AC811E;
+}
+
+.main-header__border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #FFD982;
+  pointer-events: none;
+  height: 3px;
+  filter: blur(1px);
+  z-index: 2;
 }
 
 .main-header__wrap {
@@ -423,6 +434,8 @@ img {
   margin: 0 auto;
   padding-left: 120px;
   padding-right: 120px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
