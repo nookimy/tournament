@@ -207,7 +207,6 @@ html {
 }
 
 body {
-  min-width: 1366px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.2;
@@ -217,20 +216,9 @@ body {
   padding: 0;
   background-image: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 218, 154, 0) 100%), radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 218, 154, 0) 100%), linear-gradient(rgba(255, 248, 232, 0.59), rgba(255, 248, 232, 0.59)), url(../img/rays-bg.svg);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: center, center, center, center;
+  /* background-position: center, center, center, center; */
   background-size: 1607px 1607px, 1919px 1919px, cover, cover;
   background-attachment: fixed;
-  min-height: 100vh;
-}
-
-.content {
-  padding-top: 100px;
-  padding-bottom: 150px;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding-left: 120px;
-  padding-right: 120px;
 }
 
 img {
@@ -259,6 +247,82 @@ img {
 .icon__color-element {
   fill: inherit;
   stroke: inherit;
+}
+
+/* button */
+
+.button {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+  /* чтобы псевдоэлементы не вылезали наружу */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 19.2rem;
+  min-height: 5.6rem;
+  padding: 1.4rem 4rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 1.6rem;
+  background: linear-gradient(336deg, rgb(28, 103, 1) 0%, rgb(67, 166, 23) 100%);
+  z-index: 2;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.button::before {
+  inset: 2px;
+  border-radius: 14px;
+  pointer-events: none;
+  /* не мешает клику */
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(176.33deg, #37CB19 7.41%, #21900B 97.22%);
+  filter: blur(1px);
+}
+
+.button::after {
+  inset: 4px;
+  border-radius: 1.1rem;
+  background: linear-gradient(176.33deg, #38D319 7.41%, #2BAD10 97.22%);
+}
+
+.button:hover::before,
+.button:focus::before {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(176.33deg, #37CB19 7.41%, #21900B 97.22%);
+}
+
+.button:hover::after,
+.button:focus::after {
+  background: linear-gradient(176.33deg, #37CB19 7.41%, #21900B 97.22%);
+}
+
+.button:active::before {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%), linear-gradient(176.33deg, #2BAD10 7.41%, #38D319 97.22%);
+}
+
+.button:active::after {
+  background: linear-gradient(176.33deg, #2BAD10 7.41%, #38D319 97.22%);
 }
 
 .modal {
@@ -333,6 +397,7 @@ img {
 
 .main-header {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100vw;
@@ -413,6 +478,7 @@ img {
 
 .main-footer {
   position: fixed;
+  z-index: 100;
   bottom: 0;
   left: 0;
   right: 0;
@@ -531,5 +597,88 @@ img {
   width: 2.8rem;
   height: 2.8rem;
   fill: #ffffff;
+}
+
+/* content */
+
+.content {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  min-height: 100vh;
+}
+
+.content--page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* card */
+
+.card {
+  position: relative;
+  padding: 8rem;
+  width: 80rem;
+  border: 12px solid #FFB60F;
+  border-radius: 4.9rem;
+  background-color: #FFF3DF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  color: #000000;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.card::before {
+  inset: 0;
+  border: 1px solid #301F03;
+  filter: blur(1px);
+  border-radius: 34px;
+}
+
+.card::after {
+  inset: -8px;
+  border: 3px solid rgba(255, 255, 255, 0.74);
+  border-radius: 44px;
+  filter: blur(2px);
+}
+
+.card__title {
+  margin: 0;
+  padding: 0;
+  font-family: "DaysOne", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.2rem;
+  line-height: 4.1rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.4rem;
+}
+
+.card__text {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 4.8rem;
+}
+
+.card__button {
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

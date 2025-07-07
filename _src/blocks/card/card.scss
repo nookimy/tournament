@@ -1,0 +1,60 @@
+
+/* card */
+.card {
+    position: relative;
+    padding: 8rem;
+    width: 80rem;    
+    border: 12px solid $yellow;
+    border-radius: 4.9rem;
+    background-color: #FFF3DF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+    color: $dark;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &::before {        
+        inset: 0;
+        border: 1px solid #301F03;
+        filter: blur(1px);
+        border-radius: 34px;
+        
+    }
+
+    &::after {
+        inset: -8px;
+        border: 3px solid rgba(255, 255, 255, 0.74);
+        border-radius: 44px;
+        filter: blur(2px);
+    }
+
+
+
+    &__title {
+        @include mp;
+        @include DaysOne();
+        font-size: 3.2rem;
+        line-height: 4.1rem;
+        text-align: center;
+        letter-spacing: 0.02em;
+        margin-bottom: 2.4rem;
+    }
+
+    &__text {
+        @include mp;
+        @include Inter();
+        font-size: 2rem;
+        line-height: 1.4;
+        text-align: center;
+        letter-spacing: 0.02em;
+        margin-bottom: 4.8rem;
+    }
+
+    &__button {
+        margin: 0 auto;
+    }
+}
