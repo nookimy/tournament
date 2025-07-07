@@ -23,5 +23,6 @@ document.body.removeChild(tempTextarea);
 /* Текущий год в footer */
 
 document.addEventListener('DOMContentLoaded', function () {
+    console.log('Год');
     document.getElementById('current-year').textContent = new Date().getFullYear();
   });
