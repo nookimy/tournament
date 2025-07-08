@@ -696,6 +696,7 @@ img {
   position: relative;
   padding: 8rem;
   width: 80rem;
+  min-height: 373px;
   border: 12px solid #FFB60F;
   border-radius: 4.9rem;
   background-color: #FFF3DF;
@@ -724,6 +725,10 @@ img {
   filter: blur(2px);
 }
 
+.card .load-icon {
+  margin: 0 auto 40px;
+}
+
 .card__title {
   margin: 0;
   padding: 0;
@@ -747,11 +752,10 @@ img {
   line-height: 1.4;
   text-align: center;
   letter-spacing: 0.02em;
-  margin-bottom: 4.8rem;
 }
 
 .card__button {
-  margin: 0 auto;
+  margin: 4.8rem auto 0;
 }
 
 /* form */
@@ -889,5 +893,23 @@ img {
   letter-spacing: 0.02em;
   color: #000000;
   margin-top: 16px;
+}
+
+/* load-icon */
+
+.load-icon {
+  display: block;
+  animation: spin 1s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,7 +3,8 @@
 .card {
     position: relative;
     padding: 8rem;
-    width: 80rem;    
+    width: 80rem;
+    min-height: 373px;
     border: 12px solid $yellow;
     border-radius: 4.9rem;
     background-color: #FFF3DF;
@@ -32,6 +33,10 @@
         filter: blur(2px);
     }
 
+    & .load-icon {
+        margin: 0 auto 40px;
+    }
+
 
 
     &__title {
@@ -51,10 +56,9 @@
         line-height: 1.4;
         text-align: center;
         letter-spacing: 0.02em;
-        margin-bottom: 4.8rem;
     }
 
     &__button {
-        margin: 0 auto;
+        margin: 4.8rem auto 0;
     }
 }
