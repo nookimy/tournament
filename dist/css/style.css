@@ -345,6 +345,10 @@ img {
   overflow-x: hidden;
 }
 
+.modal--error .modal__content {
+  border: 12px solid #FF382B;
+}
+
 .modal--open {
   opacity: 1;
   visibility: visible;
@@ -362,6 +366,7 @@ img {
   position: relative;
   width: 100%;
   max-width: 80rem;
+  min-height: 373px;
   padding: 8rem;
   border: 12px solid #FFB60F;
   border-radius: 4.9rem;
@@ -369,6 +374,10 @@ img {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
   color: #000000;
   transition: all 0.8s ease 0s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__content::before,
@@ -415,7 +424,6 @@ img {
   line-height: 1.4;
   text-align: center;
   letter-spacing: 0.02em;
-  margin-bottom: 4.8rem;
 }
 
 .modal__close-btn {
@@ -743,7 +751,7 @@ img {
   filter: blur(2px);
 }
 
-.card .load-icon,
+.card .icon-load,
 .card .icon-completed {
   margin: 0 auto 40px;
 }
@@ -918,6 +926,8 @@ img {
 
 .icon-load {
   display: block;
+  width: 56px;
+  height: 56px;
   animation: spin 1s linear infinite;
   transform-origin: center;
 }

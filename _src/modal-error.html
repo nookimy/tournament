@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Error message</title>
+		<meta name="viewport" content="width=1366, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body class="lock" style="padding-right: 0px;">	<!-- блокируем при открытой модалке -->	
+		<include src="./_src/blocks/main-header/main-header.html"></include>
+		<main class="content content--page-center" style="opacity: 0;"><!-- добавляем прозрачность для содержимого страницы -->
+			<include src="./_src/blocks/card/card.html"></include>
+		</main>			
+		<include src="./_src/blocks/main-footer/main-footer.html"></include>
+		<div class="modal modal--error modal--open"><!-- modal--open для показа модалки -->
+			<div class="modal__body">
+				<div class="modal__content">
+					<a href="#" class="modal__close-btn">
+						<svg aria-hidden="true" focusable="false" class="icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_5330_17757)" filter="url(#filter0_i_5330_17757)">
+							<path class="icon__color-element" d="M30.6424 4.18582C31.4234 4.96689 31.4234 6.23327 30.6423 7.01431L22.0098 15.646C21.8146 15.8412 21.8146 16.1578 22.0098 16.3531L30.6424 24.9857C31.4235 25.7667 31.4235 27.0331 30.6424 27.8141L27.8136 30.6429C27.0326 31.424 25.7662 31.424 24.9852 30.6429L16.3526 22.0103C16.1573 21.815 15.8407 21.815 15.6455 22.0103L7.01382 30.6428C6.23279 31.4239 4.9664 31.4239 4.18533 30.6428L1.35653 27.814C0.575506 27.033 0.575478 25.7667 1.35646 24.9857L9.98828 16.3531C10.1835 16.1578 10.1835 15.8412 9.98826 15.646L1.3566 7.01431C0.575547 6.23326 0.575548 4.96693 1.3566 4.18588L4.1854 1.35708C4.96645 0.576035 6.23277 0.576036 7.01382 1.35708L15.6455 9.98875C15.8407 10.184 16.1573 10.184 16.3526 9.98876L24.9852 1.35695C25.7663 0.575967 27.0325 0.575996 27.8136 1.35702L30.6424 4.18582Z" fill="#D9C199"/>
+							</g>
+							<defs>
+							<filter id="filter0_i_5330_17757" x="0" y="0" width="32" height="33" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset dy="1"/>
+							<feGaussianBlur stdDeviation="0.5"/>
+							<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+							<feBlend mode="normal" in2="shape" result="effect1_innerShadow_5330_17757"/>
+							</filter>
+							<clipPath id="clip0_5330_17757">
+							<rect width="32" height="32" fill="white"/>
+							</clipPath>
+							</defs>
+						</svg>
+					</a>
+					<h1 class="modal__title">Error message title</h1>
+					<div class="modal__text">Error message example</div>			
+				</div>
+			</div>
+		</div>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>
