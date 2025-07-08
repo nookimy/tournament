@@ -697,6 +697,9 @@ img {
   padding: 8rem;
   width: 80rem;
   min-height: 373px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 12px solid #FFB60F;
   border-radius: 4.9rem;
   background-color: #FFF3DF;
@@ -725,7 +728,8 @@ img {
   filter: blur(2px);
 }
 
-.card .load-icon {
+.card .load-icon,
+.card .icon-completed {
   margin: 0 auto 40px;
 }
 
@@ -895,10 +899,31 @@ img {
   margin-top: 16px;
 }
 
-/* load-icon */
+/* icon-load*/
 
-.load-icon {
+.icon-load {
   display: block;
+  animation: spin 1s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* icon-completed */
+
+.icon-completed {
+  display: block;
+}
+
+.icon-completed .spin {
   animation: spin 1s linear infinite;
   transform-origin: center;
 }

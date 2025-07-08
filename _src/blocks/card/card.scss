@@ -5,6 +5,9 @@
     padding: 8rem;
     width: 80rem;
     min-height: 373px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 12px solid $yellow;
     border-radius: 4.9rem;
     background-color: #FFF3DF;
@@ -33,7 +36,8 @@
         filter: blur(2px);
     }
 
-    & .load-icon {
+    & .load-icon,
+    & .icon-completed {
         margin: 0 auto 40px;
     }
 
