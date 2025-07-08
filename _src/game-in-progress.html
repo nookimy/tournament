@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Modal</title>
+		<meta name="viewport" content="width=1366, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body class="lock" style="padding-right: 0px;">	<!-- блокируем при открытой модалке -->	
+		<include src="./_src/blocks/main-header/main-header.html"></include>
+		<main class="content content--page-center" style="opacity: 0;"><!-- добавляем прозрачность для содержимого страницы -->
+			<include src="./_src/blocks/card/card.html"></include>
+		</main>			
+		<include src="./_src/blocks/main-footer/main-footer.html"></include>
+		<div class="modal modal--open"><!-- modal--open для показа модалки -->
+			<div class="modal__body">
+				<div class="game">
+					<img src="/img/screen.jpg">
+				</div>
+			</div>
+		</div>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>

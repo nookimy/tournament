@@ -24,7 +24,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 120px;
+      padding: 56px 110px;
     }
   
     &__content {
@@ -129,6 +129,27 @@
       display: flex;
 
     }
+
+    & .game {
+      overflow: hidden;
+      width: 100%;
+      border: 2px solid #000000;
+      filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));
+      border-radius: 17.6077px;
+
+      & img {
+        width: 100%;
+        max-width: unset;
+      }
+    }
 }
+
+/* Снимок экрана 2025-06-13 в 13.00.47 */
+
+
+
+
+
+
 
 
