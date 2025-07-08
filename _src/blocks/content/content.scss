@@ -1,8 +1,8 @@
 /* content */
 .content {
     @include container();
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     min-height: 100vh;
 
     &--page-center {

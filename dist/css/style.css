@@ -336,17 +336,13 @@ img {
 
 .modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(21, 14, 0, 0.75);
   z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
   overflow-y: auto;
   overflow-x: hidden;
-  /*opacity: 0;
-  visibility: hidden;*/
-  transition: all 0.8s ease 0s;
 }
 
 .modal--open {
@@ -354,35 +350,25 @@ img {
   visibility: visible;
 }
 
-.modal--open .modal__content {
-  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
-  opacity: 1;
-}
-
 .modal__body {
   min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 120px;
 }
 
 .modal__content {
-  max-width: 800px;
   position: relative;
-  background-color: #ffffff;
-  color: #000000;
   width: 100%;
-  transition: all 0.8s ease 0s;
-  /*opacity: 0;
-  transform: perspective(600px) translate(0px,-100%) rotateX(45deg);*/
+  max-width: 80rem;
   padding: 8rem;
-  width: 80rem;
   border: 12px solid #FFB60F;
   border-radius: 4.9rem;
   background-color: #FFF3DF;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
   color: #000000;
+  transition: all 0.8s ease 0s;
 }
 
 .modal__content::before,
@@ -432,28 +418,38 @@ img {
   margin-bottom: 4.8rem;
 }
 
-.modal__button {
-  margin: 0 auto;
-}
-
 .modal__close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 40px;
+  right: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 18px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
 }
 
 .modal__close-btn .icon {
-  width: 18px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
 }
 
-.modal__close-btn use.icon__symbol {
-  stroke: red;
+.modal__close-btn .icon__color-element {
+  fill: #D9C199;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.modal__close-btn:hover .icon__color-element,
+.modal__close-btn:focus .icon__color-element {
+  fill: #BDA784;
+}
+
+.modal__close-btn:active .icon__color-element {
+  fill: #D9C199;
+}
+
+.modal__form {
+  display: flex;
 }
 
 /* main-header */
@@ -683,8 +679,8 @@ img {
   margin: 0 auto;
   padding-left: 120px;
   padding-right: 120px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 120px;
+  padding-bottom: 120px;
   min-height: 100vh;
 }
 
@@ -756,5 +752,142 @@ img {
 
 .card__button {
   margin: 0 auto;
+}
+
+/* form */
+
+.form--single-input {
+  display: flex;
+  align-items: flex-end;
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+}
+
+.form--single-input fieldset {
+  flex-grow: 1;
+}
+
+.form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  padding-top: 44px;
+}
+
+.form fieldset .error-message {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #FF382B;
+}
+
+.form fieldset input[type=email],
+.form fieldset input[type=number],
+.form fieldset input[type=password],
+.form fieldset input[type=search],
+.form fieldset input[type=tel],
+.form fieldset input[type=text] {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  width: 100%;
+  height: 5.6rem;
+  background: #FFFFFF;
+  color: #000;
+  border: 2px solid #D9C199;
+  border-radius: 16px;
+  padding: 14px 16px;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.form fieldset input[type=email]::-moz-placeholder, .form fieldset input[type=number]::-moz-placeholder, .form fieldset input[type=password]::-moz-placeholder, .form fieldset input[type=search]::-moz-placeholder, .form fieldset input[type=tel]::-moz-placeholder, .form fieldset input[type=text]::-moz-placeholder {
+  color: #7E7E7E;
+}
+
+.form fieldset input[type=email]::placeholder,
+.form fieldset input[type=number]::placeholder,
+.form fieldset input[type=password]::placeholder,
+.form fieldset input[type=search]::placeholder,
+.form fieldset input[type=tel]::placeholder,
+.form fieldset input[type=text]::placeholder {
+  color: #7E7E7E;
+}
+
+.form fieldset input[type=email]:hover,
+.form fieldset input[type=number]:hover,
+.form fieldset input[type=password]:hover,
+.form fieldset input[type=search]:hover,
+.form fieldset input[type=tel]:hover,
+.form fieldset input[type=text]:hover {
+  border: 2px solid #BDA784;
+}
+
+.form fieldset input[type=email]:focus,
+.form fieldset input[type=number]:focus,
+.form fieldset input[type=password]:focus,
+.form fieldset input[type=search]:focus,
+.form fieldset input[type=tel]:focus,
+.form fieldset input[type=text]:focus {
+  border: 2px solid #FFB610;
+}
+
+.form fieldset input[type=email]:not(:focus):invalid,
+.form fieldset input[type=number]:not(:focus):invalid,
+.form fieldset input[type=password]:not(:focus):invalid,
+.form fieldset input[type=search]:not(:focus):invalid,
+.form fieldset input[type=tel]:not(:focus):invalid,
+.form fieldset input[type=text]:not(:focus):invalid {
+  border: 2px solid #FF382B;
+  color: #FF382B;
+}
+
+.form fieldset input[type=email]:not(:focus):invalid::-moz-placeholder, .form fieldset input[type=number]:not(:focus):invalid::-moz-placeholder, .form fieldset input[type=password]:not(:focus):invalid::-moz-placeholder, .form fieldset input[type=search]:not(:focus):invalid::-moz-placeholder, .form fieldset input[type=tel]:not(:focus):invalid::-moz-placeholder, .form fieldset input[type=text]:not(:focus):invalid::-moz-placeholder {
+  color: #FF382B;
+}
+
+.form fieldset input[type=email]:not(:focus):invalid::placeholder,
+.form fieldset input[type=number]:not(:focus):invalid::placeholder,
+.form fieldset input[type=password]:not(:focus):invalid::placeholder,
+.form fieldset input[type=search]:not(:focus):invalid::placeholder,
+.form fieldset input[type=tel]:not(:focus):invalid::placeholder,
+.form fieldset input[type=text]:not(:focus):invalid::placeholder {
+  color: #FF382B;
+}
+
+.form fieldset input[type=email]:not(:focus):invalid + .error-message,
+.form fieldset input[type=number]:not(:focus):invalid + .error-message,
+.form fieldset input[type=password]:not(:focus):invalid + .error-message,
+.form fieldset input[type=search]:not(:focus):invalid + .error-message,
+.form fieldset input[type=tel]:not(:focus):invalid + .error-message,
+.form fieldset input[type=text]:not(:focus):invalid + .error-message {
+  display: block;
+}
+
+/* timer */
+
+.timer {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-top: 16px;
 }
 /*# sourceMappingURL=style.css.map */

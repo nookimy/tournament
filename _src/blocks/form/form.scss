@@ -1,0 +1,78 @@
+/* form */
+.form {
+    &--single-input {
+        display: flex;
+        align-items: flex-end;
+        column-gap: 1.6rem;
+
+        & fieldset {
+            flex-grow: 1;            
+        }
+
+    }
+    & fieldset {
+        @include mp();
+        border: none;
+        position: relative;
+        padding-top: 44px;
+
+        & .error-message {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;            
+            @include Inter();            
+            font-size: 1.6rem;
+            line-height: 1.75;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: #FF382B;
+        }
+
+        & input[type='email'],
+        & input[type='number'],
+        & input[type='password'],
+        & input[type='search'],
+        & input[type='tel'],
+        & input[type='text'] {
+            @include Inter();
+            font-size: 1.6rem;
+            line-height: 1.75;            
+            width: 100%;
+            height: 5.6rem;
+            background: #FFFFFF;
+            color: #000;
+            border: 2px solid #D9C199;
+            border-radius: 16px;
+            padding: 14px 16px;
+            transition: border-color 0.2s ease;
+            outline: none;
+
+            &::placeholder {
+                color: #7E7E7E;
+            }
+
+            &:hover {
+                border: 2px solid #BDA784;
+            }
+
+            &:focus {
+                border: 2px solid #FFB610;
+            }            
+
+            &:not(:focus):invalid {
+                border: 2px solid #FF382B;
+                color: #FF382B;
+
+                &::placeholder {
+                    color: #FF382B;
+                }
+
+                & + .error-message {
+                    display: block;
+                }
+            }
+        }
+    }
+}
