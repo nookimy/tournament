@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <meta name="viewport" content="width=1366, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css?_v=20250707182629">
+    <link rel="stylesheet" href="css/style.css?_v=20250707194346">
 </head>
 
 <body>
@@ -89,7 +89,21 @@
 
 
 
-    <script src="./js/main.min.js?_v=20250707182629"></script>
+    <div id="modal-login" class="modal">
+        <div class="modal__body">
+            <div class="modal__content">
+                <a href="#" class="modal__close-btn">
+                    <svg class="icon" width="18px" height="18px" fill="none">
+                        <use class="icon__symbol" xlink:href="#icon-close"></use>
+                    </svg>
+                </a>
+                <h1 class="modal__title">Access the game</h1>
+                <div class="modal__text">Enter your email and we’ll send you a code.</div>
+                <button class="button modal__button"><span>Continue</span></button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.min.js?_v=20250707194346"></script>
 </body>
 
 </html>

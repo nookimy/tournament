@@ -20,6 +20,10 @@ body {
   background-attachment: fixed;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;

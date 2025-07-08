@@ -221,6 +221,10 @@ body {
   background-attachment: fixed;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -336,14 +340,12 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(217, 217, 217, 0.1);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  background: rgba(21, 14, 0, 0.75);
   z-index: 1000;
   overflow-y: auto;
   overflow-x: hidden;
-  opacity: 0;
-  visibility: hidden;
+  /*opacity: 0;
+  visibility: hidden;*/
   transition: all 0.8s ease 0s;
 }
 
@@ -366,16 +368,72 @@ img {
 }
 
 .modal__content {
-  max-width: 500px;
+  max-width: 800px;
   position: relative;
   background-color: #ffffff;
   color: #000000;
-  padding: 20px 30px 20px 20px;
   width: 100%;
-  box-shadow: 0px 10px 50px rgba(181, 181, 181, 0.5);
   transition: all 0.8s ease 0s;
-  opacity: 0;
-  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  /*opacity: 0;
+  transform: perspective(600px) translate(0px,-100%) rotateX(45deg);*/
+  padding: 8rem;
+  width: 80rem;
+  border: 12px solid #FFB60F;
+  border-radius: 4.9rem;
+  background-color: #FFF3DF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  color: #000000;
+}
+
+.modal__content::before,
+.modal__content::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.modal__content::before {
+  inset: 0;
+  border: 1px solid #301F03;
+  filter: blur(1px);
+  border-radius: 34px;
+}
+
+.modal__content::after {
+  inset: -8px;
+  border: 3px solid rgba(255, 255, 255, 0.74);
+  border-radius: 44px;
+  filter: blur(2px);
+}
+
+.modal__title {
+  margin: 0;
+  padding: 0;
+  font-family: "DaysOne", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.2rem;
+  line-height: 4.1rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.4rem;
+}
+
+.modal__text {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 4.8rem;
+}
+
+.modal__button {
+  margin: 0 auto;
 }
 
 .modal__close-btn {
