@@ -1,0 +1,26 @@
+/* reward */
+.reward {
+    position: relative;
+    display: inline-flex;
+    width: 160px;
+    height: 52px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    font-size: 0;
+    color: transparent;
+    z-index: 1;    
+
+    &--gold {
+        background-image: url(../reward/gold-bg.svg);
+    }
+
+    &--silver {
+        background-image: url(../reward/silver-bg.svg);
+    }
+
+    &--bronze {
+        background-image: url(../reward/bronze-bg.svg);
+    }
+}
+

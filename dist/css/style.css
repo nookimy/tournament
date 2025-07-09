@@ -514,10 +514,10 @@ img {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: 120px;
-  padding-right: 120px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -585,8 +585,8 @@ img {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 60px;
+  padding-right: 60px;
   padding-top: 1.8rem;
   padding-bottom: 1.8rem;
   display: flex;
@@ -599,8 +599,8 @@ img {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .main-footer__copyright p {
@@ -700,8 +700,8 @@ img {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 60px;
+  padding-right: 60px;
   padding-top: 120px;
   padding-bottom: 120px;
   min-height: 100vh;
@@ -961,5 +961,161 @@ img {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* rating */
+
+.rating__title {
+  margin: 0;
+  padding: 0;
+  font-family: "DaysOne", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.2rem;
+  line-height: 4.1rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #000;
+  margin-bottom: 4.8rem;
+}
+
+.rating__content {
+  width: 1246px;
+  margin: 0 auto;
+  position: relative;
+  border: 12px solid #FFB60F;
+  border-radius: 4.9rem;
+  background-color: #FFF3DF;
+  color: #000;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rating__content::before,
+.rating__content::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.rating__content::before {
+  inset: 0;
+  border: 1px solid #301F03;
+  filter: blur(1px);
+  border-radius: 34px;
+}
+
+.rating__content::after {
+  inset: -8px;
+  border: 3px solid rgba(255, 255, 255, 0.74);
+  border-radius: 44px;
+  filter: blur(2px);
+}
+
+.rating__content-wrap {
+  border-radius: 34px;
+  overflow: hidden;
+}
+
+/* table */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "DaysOne", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 14px 16px;
+}
+
+.table__head th {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.table__head th.rating {
+  width: 144px;
+}
+
+.table__head th.id {
+  width: 360px;
+}
+
+.table__head th.score {
+  width: 360px;
+}
+
+.table__body tr {
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.table__body td {
+  height: 87px;
+}
+
+.table--dark .table__head {
+  background-color: #FFF3DF;
+  color: #000;
+}
+
+.table--dark .table__body {
+  background-color: #27241F;
+  color: #fff;
+}
+
+.table--dark .table__body tr {
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.table--dark .table__body tr:hover {
+  background-color: #544E3A;
+}
+
+.table--dark .table__body tr:not(:last-child) {
+  border-bottom: 1px solid #958C7C;
+}
+
+/* reward */
+
+.reward {
+  position: relative;
+  display: inline-flex;
+  width: 160px;
+  height: 52px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-size: 0;
+  color: transparent;
+  z-index: 1;
+}
+
+.reward--gold {
+  background-image: url(../img/reward/gold-bg.svg);
+}
+
+.reward--silver {
+  background-image: url(../img/reward/silver-bg.svg);
+}
+
+.reward--bronze {
+  background-image: url(../img/reward/bronze-bg.svg);
+}
+
+.logo a {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

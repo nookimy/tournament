@@ -1,0 +1,78 @@
+/* table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    @include DaysOne();
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    & td {
+        text-align: center;
+        vertical-align: middle;
+        padding: 14px 16px;
+        
+    }
+
+    &__head {
+        & th {
+            text-align: center;
+            padding: 24px 16px;
+            
+
+            &.rating {
+                width: 144px;
+            }
+
+            &.id {
+                width: 360px;
+            }
+
+            &.score {
+                width: 360px;
+            }
+        }
+    }
+
+    &__body {
+        & tr {
+            background-color: transparent;
+            transition: background-color 0.2s ease;
+            
+        }
+
+        & td {
+            height: 87px;
+        }
+    }
+
+    &--dark {
+        & .table {
+            &__head {
+                background-color: #FFF3DF;
+                color: #000;
+            }
+
+            &__body {
+                background-color: #27241F;
+                color: #fff;
+
+                & tr {
+                    background-color: transparent;
+                    transition: background-color 0.2s ease;
+
+                    &:hover {
+                        background-color: #544E3A;
+                    }
+                }
+
+                & tr:not(:last-child) {
+                    border-bottom: 1px solid #958C7C;
+                }
+            }
+
+        }
+    }
+
+}
