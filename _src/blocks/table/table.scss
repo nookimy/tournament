@@ -75,4 +75,32 @@
         }
     }
 
+     &--light {
+        & .table {
+            &__head {
+                background-color: #000;
+                color: #fff;
+            }
+
+            &__body {
+                background-color: #FFF3DF;
+                color: #000;
+
+                & tr {
+                    background-color: transparent;
+                    transition: background-color 0.2s ease;
+
+                    &:hover {
+                        background-color: #FFEFD1;
+                    }
+                }
+
+                & tr:not(:last-child) {
+                    border-bottom: 1px solid #ECDFCC;
+                }
+            }
+
+        }
+    }
+
 }

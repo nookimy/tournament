@@ -1086,6 +1086,29 @@ img {
   border-bottom: 1px solid #958C7C;
 }
 
+.table--light .table__head {
+  background-color: #000;
+  color: #fff;
+}
+
+.table--light .table__body {
+  background-color: #FFF3DF;
+  color: #000;
+}
+
+.table--light .table__body tr {
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.table--light .table__body tr:hover {
+  background-color: #FFEFD1;
+}
+
+.table--light .table__body tr:not(:last-child) {
+  border-bottom: 1px solid #ECDFCC;
+}
+
 /* reward */
 
 .reward {
