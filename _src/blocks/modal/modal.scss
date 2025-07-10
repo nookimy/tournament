@@ -37,7 +37,7 @@
       position: relative;   
       width: 100%;
       max-width: 80rem;
-      min-height: 373px;
+      min-height: 505px;
       padding: 8rem;   
       border: 12px solid $yellow;
       border-radius: 4.9rem;
@@ -97,6 +97,7 @@
     }
   
     &__close-btn {
+        @include btn-reset();
         position: absolute;
         top: 40px;
         right: 40px;

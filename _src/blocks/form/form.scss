@@ -2,8 +2,10 @@
 .form {
     &--single-input {
         display: flex;
+        width: 100%;
         align-items: flex-end;
         column-gap: 1.6rem;
+        margin-top: 24px;
 
         & fieldset {
             flex-grow: 1;            

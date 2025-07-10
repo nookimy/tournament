@@ -1,5 +1,6 @@
 /* timer */
 .timer {
+    width: 100%;
     @include mp();
     @include Inter();
     font-size: 1.6rem;

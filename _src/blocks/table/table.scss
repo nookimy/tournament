@@ -62,7 +62,7 @@
                     background-color: transparent;
                     transition: background-color 0.2s ease;
 
-                    &:hover {
+                    &.current {
                         background-color: #544E3A;
                     }
                 }
@@ -90,9 +90,10 @@
                     background-color: transparent;
                     transition: background-color 0.2s ease;
 
-                    &:hover {
+                    &.current {
                         background-color: #FFEFD1;
                     }
+
                 }
 
                 & tr:not(:last-child) {
