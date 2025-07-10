@@ -169,20 +169,6 @@ function html() {
   //.pipe(htmlmin({ collapseWhitespace: true }))
   // Подмена путей до изображений
   .pipe(replace('../', '/img/'))
-  .pipe(versionNumber({
-		'value' : '%DT%',
-    'append' : {
-      'key' : '_v',
-      'cover' : 0,
-        'to' : [
-            'css',
-            'js',
-        ]
-    },
-    'output' : {
-        'file' : './_src/version.json'
-    }
-  }))
   .pipe(htmlBeautify())
   .pipe(size({
     showFiles:true
