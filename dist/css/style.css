@@ -938,8 +938,9 @@ img {
 
 .icon-load {
   display: block;
-  width: 56px;
-  height: 56px;
+}
+
+.icon-load .spin {
   animation: spin 1s linear infinite;
   transform-origin: center;
 }
