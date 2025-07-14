@@ -1,0 +1,54 @@
+/* tickets */
+.tickets {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    margin: 0 auto;
+    
+
+    & p {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 184px;
+        @include mp();
+        @include DaysOne();
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #6D5D41;
+        padding: 20px 0;        
+        border: 1px solid #68593E;
+        border-radius: 4px;
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: 222px;
+        height: 85px;
+        transform:  translateX(-50%) translateY(-50%);
+        background-image: url(../tickets/tickets-bg.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        bottom: 0;
+        left: 50%;
+        width: 222px;
+        height: 15px;
+        transform:  translateX(-50%) translateY(15px);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0) 100%);
+        filter: blur(2px);
+    }
+}

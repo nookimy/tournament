@@ -95,6 +95,28 @@
         text-align: center;
         letter-spacing: 0.02em;
     }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      margin-top: 24px;
+      margin-bottom: 48px;
+      
+      & .note {
+        width: 100%;
+        @include mp();
+        @include Inter();
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 1.75;
+        letter-spacing: 0.02em;
+        color: #000000;
+      }
+      
+    }
+
+    
   
     &__close-btn {
         @include btn-reset();

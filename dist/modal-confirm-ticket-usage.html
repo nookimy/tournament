@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm Ticket Usage</title>
+    <meta name="viewport" content="width=1366, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="lock" style="padding-right: 0px;"> <!-- блокируем при открытой модалке -->
+    <header class="main-header">
+        <div class="main-header__wrap">
+            <div class="logo">
+                <a href="#" target="_blank">
+                    <img src="/img/logo/logo.png" alt="Elephant Games">
+                </a>
+            </div>
+            <div class="user">
+                <a id="username" href="#" class="user__name">1789302rw</a>
+                <button id="copy-username" title="Копировать ID">
+                    <svg aria-hidden="true" focusable="false" class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="icon__color-element" fill-rule="evenodd" clip-rule="evenodd" d="M4.42692 3.0965C3.69215 3.0965 3.0965 3.69215 3.0965 4.42692V11.6112C3.0965 12.199 3.57302 12.6755 4.16084 12.6755C4.6017 12.6755 4.95909 13.0329 4.95909 13.4738C4.95909 13.9146 4.6017 14.272 4.16084 14.272C2.6913 14.272 1.5 13.0807 1.5 11.6112V4.42692C1.5 2.81043 2.81043 1.5 4.42692 1.5H11.6112C13.0807 1.5 14.272 2.6913 14.272 4.16084C14.272 4.6017 13.9146 4.95909 13.4738 4.95909C13.0329 4.95909 12.6755 4.6017 12.6755 4.16084C12.6755 3.57302 12.199 3.0965 11.6112 3.0965H4.42692Z" fill="#FFB610"></path>
+                        <path class="icon__color-element" d="M16.0788 5.78687H8.20869C6.87129 5.78687 5.78711 6.87104 5.78711 8.20845V16.0786C5.78711 17.416 6.87129 18.5002 8.20869 18.5002H16.0788C17.4162 18.5002 18.5004 17.416 18.5004 16.0786V8.20845C18.5004 6.87104 17.4162 5.78687 16.0788 5.78687Z" fill="#FFB610"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="main-header__border"></div>
+    </header>
+    <main class="content content--page-center" style="opacity: 0;"><!-- добавляем прозрачность для содержимого страницы -->
+        <section class="card">
+            <div class="card__wrap">
+                <h1 class="card__title">Your journey starts here!</h1>
+                <div class="card__text">Log in to enter the game, compete in the tournament, and play with the best players from around the world.</div>
+                <button href="#modal-login" class="button card__button modal-link"><span>Login to Play</span></button>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__wrap">
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li><a href="#">Market place</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </nav>
+            <section class="social-media">
+                <h3 class="social-media__title">Jion our community:</h3>
+                <ul class="social-media__list">
+                    <li>
+                        <a href="#">
+                            <svg aria-hidden="true" focusable="false" class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="icon__color-element" width="28" height="28" rx="14" fill="white"></rect>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5 14C5 10.4049 5 8.60729 5.85669 7.31255C6.23925 6.73439 6.73439 6.23925 7.31255 5.85669C8.60729 5 10.4049 5 14 5C17.5951 5 19.3927 5 20.6874 5.85669C21.2656 6.23925 21.7608 6.73439 22.1433 7.31255C23 8.60729 23 10.4049 23 14C23 17.5951 23 19.3927 22.1433 20.6874C21.7608 21.2656 21.2656 21.7608 20.6874 22.1433C19.3927 23 17.5951 23 14 23C10.4049 23 8.60729 23 7.31255 22.1433C6.73439 21.7608 6.23925 21.2656 5.85669 20.6874C5 19.3927 5 17.5951 5 14ZM18.6593 14.0002C18.6593 16.5735 16.5732 18.6596 13.9998 18.6596C11.4265 18.6596 9.34043 16.5735 9.34043 14.0002C9.34043 11.4269 11.4265 9.34082 13.9998 9.34082C16.5732 9.34082 18.6593 11.4269 18.6593 14.0002ZM13.9998 17.0832C15.7025 17.0832 17.0828 15.7029 17.0828 14.0002C17.0828 12.2975 15.7025 10.9172 13.9998 10.9172C12.2971 10.9172 10.9168 12.2975 10.9168 14.0002C10.9168 15.7029 12.2971 17.0832 13.9998 17.0832ZM18.8433 10.2015C19.4479 10.2015 19.9381 9.71138 19.9381 9.10673C19.9381 8.50207 19.4479 8.0119 18.8433 8.0119C18.2386 8.0119 17.7485 8.50207 17.7485 9.10673C17.7485 9.71138 18.2386 10.2015 18.8433 10.2015Z" fill="black"></path>
+                            </svg>
+                            <span class="visually-hidden">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg aria-hidden="true" focusable="false" class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="icon__color-element" width="28" height="28" rx="14" fill="white"></rect>
+                                <path d="M14.9209 20.4134L11.0229 20.3406C9.76076 20.3152 8.49552 20.3659 7.25816 20.1029C5.37585 19.7099 5.2425 17.7831 5.10296 16.1669C4.91069 13.8948 4.98513 11.5814 5.34796 9.32815C5.55279 8.06387 6.35888 7.30946 7.60547 7.22737C11.8136 6.92943 16.0498 6.96474 20.2486 7.10374C20.6921 7.11648 21.1386 7.18612 21.5758 7.2654C23.7343 7.65204 23.7869 9.8355 23.9268 11.6736C24.0664 13.5306 24.0074 15.3972 23.7407 17.2415C23.5268 18.7686 23.1174 20.0493 21.3898 20.1729C19.2251 20.3346 17.1102 20.4647 14.9395 20.4233C14.9396 20.4134 14.9271 20.4134 14.9209 20.4134ZM12.6292 16.5472C14.2605 15.5901 15.8606 14.649 17.4825 13.6983C15.8482 12.7412 14.2511 11.8 12.6292 10.8493V16.5472Z" fill="black"></path>
+                            </svg>
+                            <span class="visually-hidden">Youtube</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg aria-hidden="true" focusable="false" class="icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect class="icon__color-element" width="28" height="28" rx="14" fill="white"></rect>
+                                <path d="M15.373 23V14.7894H18.2676L18.701 11.5895H15.3729V9.54653C15.3729 8.6201 15.6431 7.98879 17.0385 7.98879L18.8182 7.98799V5.12607C18.5104 5.08715 17.4539 5 16.2249 5C13.6589 5 11.9021 6.49118 11.9021 9.22972V11.5895H9V14.7894H11.9021V22.9999H15.373V23Z" fill="black"></path>
+                            </svg>
+                            <span class="visually-hidden">Facebook</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="main-footer__copyright">
+            <p>© <span id="current-year">2000</span> All rigts reserved</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <div id="modal-login" class="modal modal--open"><!-- modal--open для показа модалки -->
+        <div class="modal__body">
+            <div class="modal__content">
+                <button href="#" class="modal__close-btn">
+                    <svg aria-hidden="true" focusable="false" class="icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_5330_17757)" filter="url(#filter0_i_5330_17757)">
+                            <path class="icon__color-element" d="M30.6424 4.18582C31.4234 4.96689 31.4234 6.23327 30.6423 7.01431L22.0098 15.646C21.8146 15.8412 21.8146 16.1578 22.0098 16.3531L30.6424 24.9857C31.4235 25.7667 31.4235 27.0331 30.6424 27.8141L27.8136 30.6429C27.0326 31.424 25.7662 31.424 24.9852 30.6429L16.3526 22.0103C16.1573 21.815 15.8407 21.815 15.6455 22.0103L7.01382 30.6428C6.23279 31.4239 4.9664 31.4239 4.18533 30.6428L1.35653 27.814C0.575506 27.033 0.575478 25.7667 1.35646 24.9857L9.98828 16.3531C10.1835 16.1578 10.1835 15.8412 9.98826 15.646L1.3566 7.01431C0.575547 6.23326 0.575548 4.96693 1.3566 4.18588L4.1854 1.35708C4.96645 0.576035 6.23277 0.576036 7.01382 1.35708L15.6455 9.98875C15.8407 10.184 16.1573 10.184 16.3526 9.98876L24.9852 1.35695C25.7663 0.575967 27.0325 0.575996 27.8136 1.35702L30.6424 4.18582Z" fill="#D9C199"></path>
+                        </g>
+                        <defs>
+                            <filter id="filter0_i_5330_17757" x="0" y="0" width="32" height="33" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                <feOffset dy="1"></feOffset>
+                                <feGaussianBlur stdDeviation="0.5"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_5330_17757"></feBlend>
+                            </filter>
+                            <clipPath id="clip0_5330_17757">
+                                <rect width="32" height="32" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+                <h1 class="modal__title">Confirm Ticket Usage</h1>
+                <div class="modal__text">You have 20 free tickets on your account. To join<br>
+                    the tournament, 20 tickets will be debited.<br>
+                    Are you ready to continue?</div>
+                <div class="modal__info">
+                    <div class="tickets">
+                        <p>9999 tickets</p>
+                    </div>
+
+                    <p class="note">*Tickets have already been added to your account</p>
+                </div>
+                <button class="button modal__button"><span>Confirm & Join</span></button>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/main.min.js"></script>
+</body>
+
+</html>
