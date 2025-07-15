@@ -1148,26 +1148,65 @@ img {
 
 .reward {
   position: relative;
-  display: inline-flex;
-  width: 160px;
-  height: 52px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  font-size: 0;
-  color: transparent;
   z-index: 1;
 }
 
+.reward p {
+  width: 126px;
+  height: 33px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 126px;
+  height: 33px;
+  margin: 0;
+  padding: 0;
+  font-family: "DaysOne", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
 .reward--gold {
-  background-image: url(../img/reward/gold-bg.svg);
+  color: #B67703;
 }
 
 .reward--silver {
-  background-image: url(../img/reward/silver-bg.svg);
+  color: #6D6A62;
 }
 
 .reward--bronze {
+  color: #6F5948;
+}
+
+.reward::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 52px;
+  transform: translateX(-50%) translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.reward--gold::before {
+  background-image: url(../img/reward/gold-bg.svg);
+}
+
+.reward--silver::before {
+  background-image: url(../img/reward/silver-bg.svg);
+}
+
+.reward--bronze::before {
   background-image: url(../img/reward/bronze-bg.svg);
 }
 

@@ -1,26 +1,61 @@
 /* reward */
 .reward {
     position: relative;
-    display: inline-flex;
-    width: 160px;
-    height: 52px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    font-size: 0;
-    color: transparent;
     z-index: 1;    
 
+    & p {
+        width: 126px;
+        height: 33px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 126px;
+        height: 33px;
+        @include mp();
+        @include DaysOne();
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;        
+        padding: 5px;        
+    }
+
     &--gold {
+            color: #B67703;
+        }
+
+        &--silver {
+            color: #6D6A62;
+        }
+
+        &--bronze {
+            color:  #6F5948;
+        }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: 160px;
+        height: 52px;
+        transform:  translateX(-50%) translateY(-50%);        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    &--gold::before {
         background-image: url(../reward/gold-bg.svg);
     }
 
-    &--silver {
+    &--silver::before {
         background-image: url(../reward/silver-bg.svg);
     }
 
-    &--bronze {
+    &--bronze::before {
         background-image: url(../reward/bronze-bg.svg);
     }
 }
-
