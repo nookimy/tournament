@@ -214,10 +214,10 @@ body {
   font-style: normal;
   margin: 0;
   padding: 0;
-  background-image: url(../img/rays-bg.png);
-  background-repeat: no-repeat;
-  /* background-position: center; */
-  background-size: cover;
+  background-image: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 218, 154, 0) 100%), radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 218, 154, 0) 100%), linear-gradient(rgba(255, 248, 232, 0.59), rgba(255, 248, 232, 0.59)), url(../img/rays-bg.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: center, center, center, center;
+  background-size: 1607px 1607px, 1919px 1919px, cover, cover;
   background-attachment: fixed;
 }
 
